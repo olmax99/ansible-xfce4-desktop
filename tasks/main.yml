@@ -19,3 +19,8 @@
 
 - name: restart login manager service
   service: name="{{ xfce4_login_manager_service }}" state="restarted"
+
+- name: Generate xfce4 configs
+  import_tasks: config.yml
+  tags:
+    - configs
